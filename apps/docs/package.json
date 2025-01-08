@@ -10,16 +10,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
-    "next": "^14.2.3",
+    "@morton-ui/components": "workspace:*",
+    "next": "15.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.3",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@morton-ui/eslint-config": "workspace:*",
+    "@morton-ui/tailwind-config": "workspace:*",
+    "@morton-ui/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",

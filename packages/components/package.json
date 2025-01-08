@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@morton-ui/components",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -9,7 +9,7 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./badge": "./src/badge/index.ts"
   },
   "license": "MIT",
   "scripts": {
@@ -19,16 +19,20 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@morton-ui/eslint-config": "workspace:*",
+    "@morton-ui/tailwind-config": "workspace:*",
+    "@morton-ui/typescript-config": "workspace:*",
     "@types/react": "^18.2.61",
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "cva": "npm:class-variance-authority@^0.7.1"
   }
 }

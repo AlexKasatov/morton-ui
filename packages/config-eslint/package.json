@@ -1,8 +1,9 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@morton-ui/eslint-config",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@vercel/style-guide": "^5.2.0",
     "eslint-config-turbo": "^2.0.0"
   }

@@ -6,7 +6,9 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "reinstall": "pnpm -r exec rm -rf node_modules && pnpm install",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "demo": "pnpm run --filter demo dev"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
@@ -17,5 +19,5 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-tailwind"
+  "name": "morton-ui"
 }

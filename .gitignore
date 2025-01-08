@@ -32,5 +32,13 @@ yarn-error.log*
 # turbo
 .turbo
 
-# ui
+# components
 dist/
+
+# vercel
+.vercel
+
+# IDEs/Editors
+.vscode/
+.idea/
+*.swp

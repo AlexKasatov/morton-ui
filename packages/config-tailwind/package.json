@@ -1,12 +1,12 @@
 {
-  "name": "@repo/tailwind-config",
+  "name": "@morton-ui/tailwind-config",
   "version": "0.0.0",
   "private": true,
   "exports": {
     ".": "./tailwind.config.ts"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
+    "@morton-ui/typescript-config": "workspace:*",
     "tailwindcss": "^3.4.1"
   }
 }

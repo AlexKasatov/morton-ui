@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
-import sharedConfig from "@repo/tailwind-config";
+import sharedConfig from "@morton-ui/tailwind-config";
 
 const config: Pick<Config, "prefix" | "presets" | "content"> = {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.tsx", "./src/**/*.ts"],
   prefix: "ui-",
   presets: [sharedConfig],
 };
