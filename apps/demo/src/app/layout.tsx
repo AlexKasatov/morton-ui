@@ -1,6 +1,8 @@
 import "./globals.css";
 import "@morton-ui/components/styles.css";
-import type { Metadata } from "next";
+import type {PropsWithChildren} from "react";
+import type {Metadata, NextPage} from "next";
+// eslint-disable-next-line camelcase -- we need to import font name in snake_case
 import { Noto_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({ subsets: ["latin"] });
@@ -10,11 +12,7 @@ export const metadata: Metadata = {
   description: "React Components Library",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}): JSX.Element {
+const RootLayout: NextPage<PropsWithChildren> = ({children}) => {
   return (
     <html lang="en">
 
@@ -27,3 +25,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
