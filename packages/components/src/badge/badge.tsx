@@ -1,17 +1,26 @@
-import type { FC, HTMLAttributes, PropsWithChildren } from "react";
+import { forwardRef, type HTMLAttributes} from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { badge, type BadgeCvaProps } from "./badge.cva.ts";
 
-interface BadgeProps extends HTMLAttributes<Omit<HTMLSpanElement, 'color'> >, PropsWithChildren, BadgeCvaProps {
+interface BadgeProps extends HTMLAttributes<Omit<HTMLSpanElement, 'color'> >, BadgeCvaProps {
   color?: Exclude<BadgeCvaProps['color'], null>;
+  asChild?: boolean
 }
 
-export const Badge:FC<BadgeProps> = ({children, color, size, ...props}) => {
+export const Badge = forwardRef<HTMLSpanElement, BadgeProps>((props, ref) => {
+  const { children, color, size, asChild = false, ...restProps } = props;
+  const classNames = badge({color, size});
+  const Component = asChild ? Slot : 'span';
+
   return (
-    <span
-      className={badge({color, size})}
-      {...props}
+    <Component
+      className={classNames}
+      ref={ref}
+      {...restProps}
     >
       {children}
-    </span>
+    </Component>
   )
-}
+});
+
+Badge.displayName = "MortonUi.Badge"
