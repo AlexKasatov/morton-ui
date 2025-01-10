@@ -9,7 +9,8 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./badge": "./src/badge/index.ts"
+    "./badge": "./src/badge/index.ts",
+    "./button": "./src/button/index.ts"
   },
   "license": "MIT",
   "scripts": {
